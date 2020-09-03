@@ -1,0 +1,23 @@
+<h2>Detay</h2> 
+
+<hr/>
+<div *ngIf="person">
+  <div>
+    <label><b>Adınız: </b></label> {{person.firstName}}
+  </div>
+  <div>
+    <label><b>Soyadınız: </b></label> {{person.lastName}}
+  </div>
+  <div>
+    <label><b>Email Adresiniz: </b></label> {{person.emailId}}
+  </div>  
+  <div>
+    <label><b>Telefon Numaranız: </b></label> {{person.phone}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Makaleler</button><br>
+
+

@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Makaleler ve Bilgileriniz</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ad</th>
+          <th>Soyad</th>
+          <th>Email</th>
+          <th>Telefon</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of persons | async">
+          <td>{{person.firstName}}</td>
+          <td>{{person.lastName}}</td>
+          <td>{{person.emailId}}</td>
+          <td>{{person.phone}}</td>
+          <td><button (click)="deletePerson(person.id)" class="btn btn-danger">Sil</button>
+              <button (click)="updatePerson(person.id)" class="btn btn-info" style="margin-left: 10px">Güncelle</button>
+              <button (click)="personDetails(person.id)" class="btn btn-info" style="margin-left: 10px">Detayları Göster</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
